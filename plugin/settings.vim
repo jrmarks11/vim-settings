@@ -27,7 +27,6 @@ set nocompatible
 set noerrorbells
 set nrformats-=octal
 set number
-set relativenumber
 set ruler
 set scrolloff=1
 set sessionoptions-=options
@@ -94,3 +93,9 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 20
+
+if exists('$TMUX')
+  set norelativenumber
+else
+  set relativenumber
+endif
